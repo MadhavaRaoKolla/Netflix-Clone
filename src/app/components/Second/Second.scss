@@ -1,7 +1,7 @@
 .outside{
     // background-color: blue;
     margin-bottom: 10px;
-    padding: 4rem 0;
+    padding: 5.5rem 0;
     .inner{
         padding:0 9.5rem;
         display: flex;
@@ -19,9 +19,10 @@
             }
         }
         .left{
+            position: relative;
             padding-left: 10px;
             img{
-                width: 30rem;
+                width: 32rem;
             }
         }
     }

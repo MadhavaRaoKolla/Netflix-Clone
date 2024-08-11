@@ -1,0 +1,29 @@
+.footer {
+  padding: 3rem 5rem;
+  .content {
+    margin: 0 5rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    span {
+      padding-top: 1rem;
+      color: rgb(163, 161, 161);
+      font-size: 0.9rem;
+      margin: 5px;
+    }
+    .links {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        list-style: none;
+        text-decoration: underline;
+        &:hover {
+          cursor: pointer;
+        }
+        li {
+          padding: 14px 0 0;
+        }
+      }
+    }
+  }
+}

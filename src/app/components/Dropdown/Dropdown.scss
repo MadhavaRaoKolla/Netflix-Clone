@@ -1,13 +1,20 @@
 .dropdown {
-    select.dropdown-select {
-      background: transparent;
-      border: 1px solid white;
-      color: white;
-      padding: 0.5rem;
-      border-radius: 5px;
-      cursor: pointer;
-      option{
-          color: black;
-      }
+  border: 1px solid white;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px 15px;
+  width: 5.1rem;
+  display: flex;
+  align-items: center;
+  background-color: rgba(38, 38, 38, 0.5);
+
+  .dropdown-select {
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    option {
+      color: black;
     }
   }
+}

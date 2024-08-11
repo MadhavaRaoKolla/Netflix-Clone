@@ -1,68 +1,61 @@
 .main {
-    background-image: url('/assets/movies.jpg');
-    background-position: center;
-    position: relative;
-    height: 100vh;
+  background-image: url("/assets/movies.jpg");
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  .nav {
+    position: absolute;
+    top: 0;
+    width: 75%;
+    padding: 1.5rem 1rem;
     display: flex;
-  
-    .nav {
-      position: absolute;
-      top: 0;
-      width: 80%;
-      padding: 1.5rem 8rem;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-  
-      .netflix {
-        font-weight: 900;
-        font-size: 2.5rem;
-        color: #e51923;
-      }
+    justify-content: space-between;
 
-      .content {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-
-        .sign-in {
-          padding: 0.5rem 1rem;
-          font-size: 1rem;
-          color: white;
-          background-color: #e50914;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s ease;
-  
-          &:hover {
-            background-color: #d0101a;
-          }
-        }
-      }
-    }
-  
-    .photo {
-      padding-top: 6rem;
-      flex-grow: 1;
+    .content {
       display: flex;
-      justify-content: center;
       align-items: center;
-      background: rgba(0, 0, 0, 0.6);
-  
-      .center {
-        text-align: center;
-  
-        h2 {
-          font-size: 3rem;
-          margin-bottom: 1rem;
-        }
-  
-        p {
-          font-size: 1.5rem;
-          margin-bottom: 1rem;
+      gap: 1.5rem;
+
+      .sign-in {
+        padding: 0.3rem 1rem;
+        font-size: 1rem;
+        color: white;
+        background-color: #e50914;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #d0101a;
         }
       }
     }
   }
-  
+
+  .photo {
+    padding-top: 7rem;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.65);
+
+    .center {
+      text-align: center;
+
+      h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

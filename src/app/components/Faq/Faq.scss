@@ -1,0 +1,19 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+  align-items: center;
+  h1 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  .second {
+    padding-top: 1.5rem;
+    width: 76vw;
+    .questions {
+      padding-bottom: 2.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
