@@ -7,7 +7,7 @@ const Form = () => {
       </h3>
       <div className="details">
         <input type="email" placeholder="Email address" />
-        <button>Get Started {'>'}</button>
+        <button >Get Started {">"}</button>
       </div>
     </div>
   );
