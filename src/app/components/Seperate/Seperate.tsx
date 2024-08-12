@@ -1,9 +1,13 @@
-import './Seperate.scss';
+"use client";
+import styled from "styled-components";
 
 const Seperate = () => {
-  return (
-    <div className='seperate'></div>
-  )
-}
+  return <Seperatediv className="seperate"></Seperatediv>;
+};
 
-export default Seperate
+const Seperatediv = styled.div`
+  height: 8px;
+  background-color: rgb(41, 40, 40);
+`;
+
+export default Seperate;

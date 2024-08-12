@@ -5,7 +5,7 @@ import Netflix from "../Netflix/Netflix";
 
 const Header = () => {
   return (
-    <div className="main">
+    <header className="main">
       <div className="nav">
         <Netflix />
         <div className="content">
@@ -20,7 +20,7 @@ const Header = () => {
           <Form />
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
