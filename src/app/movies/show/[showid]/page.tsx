@@ -1,5 +1,6 @@
 import Navbar from "@/app/components/Navbar/Navbar";
 import movieStyles from "../../Movie.module.scss";
+import Link from "next/link";
 
 const Show = async ({
   params,
@@ -17,7 +18,7 @@ const Show = async ({
   return (
     <div className={movieStyles.box}>
       <Navbar />
-      <div>
+      <div className={movieStyles.content}>
         <div className={movieStyles.data}>
           <div className={movieStyles.info}>
             <h1>{data.name}. </h1>
@@ -38,6 +39,7 @@ const Show = async ({
             />
           </div>
         </div>
+        <Link href={`/movies`}>Go back</Link>
       </div>
     </div>
   );
