@@ -28,7 +28,7 @@ const Input = styled.input`
 
 const Button = styled.button`
   margin: 0;
-  padding: 0.8rem 1.5rem;
+  padding: 0.4rem 1.5rem;
   font-size: 1.5rem;
   font-weight: 500;
   color: white;

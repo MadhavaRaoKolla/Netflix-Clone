@@ -2,6 +2,7 @@ import "./Header.scss";
 import Form from "../Form/Form";
 import Dropdown from "../Dropdown/Dropdown";
 import Netflix from "../Netflix/Netflix";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -18,6 +19,9 @@ const Header = () => {
           <h2>Unlimited movies, TV shows, and more</h2>
           <p>Watch anywhere. Cancel anytime.</p>
           <Form />
+          <Link href="/movies" className="movie">
+            Movies
+          </Link>
         </div>
       </div>
     </header>
