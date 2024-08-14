@@ -46,7 +46,7 @@ const Movies = async () => {
         <div className={styles.section}>
           <h1>MOVIES</h1>
           <div className={styles.cardsContainer}>
-            <Leftbutton />
+            {/* <Leftbutton /> */}
             <div className={styles.cards}>
               {MovieData.results.map((item: MovieObject) => (
                 <Link key={item.id} href={`/movies/movie/${item.id}`}>
@@ -59,14 +59,14 @@ const Movies = async () => {
                 </Link>
               ))}
             </div>
-            <Rightbutton />
+            {/* <Rightbutton /> */}
           </div>
         </div>
 
         <div className={styles.section}>
           <h1>TV SHOWS</h1>
           <div className={styles.cardsContainer}>
-            <Leftbutton />
+            {/* <Leftbutton /> */}
             <div className={styles.cards}>
               {ShowsData.results.map((item: ShowObject) => (
                 <Link key={item.id} href={`/movies/show/${item.id}`}>
@@ -79,14 +79,14 @@ const Movies = async () => {
                 </Link>
               ))}
             </div>
-            <Rightbutton />
+            {/* <Rightbutton /> */}
           </div>
         </div>
 
         <div className={styles.section}>
           <h1>PEOPLE</h1>
           <div className={styles.cardsContainer}>
-            <Leftbutton />
+            {/* <Leftbutton /> */}
             <div className={styles.cards}>
               {PeopleData.results.map((item: PersonObject) => (
                 <Link key={item.id} href={`/movies/person/${item.id}`}>
@@ -99,7 +99,7 @@ const Movies = async () => {
                 </Link>
               ))}
             </div>
-            <Rightbutton />
+            {/* <Rightbutton /> */}
           </div>
         </div>
       </div>
