@@ -11,7 +11,7 @@ const Show = async ({
 }) => {
   const data = await (
     await fetch(
-      `https://api.themoviedb.org/3/tv/${params.showid}?api_key=842ee9d1709b07af67bff6cbe571350a`
+      `https://api.themoviedb.org/3/tv/${params.showid}?api_key=${process.env.VITE_TMDB_API_KEY}`
     )
   ).json();
 
