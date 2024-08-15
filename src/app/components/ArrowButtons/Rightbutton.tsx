@@ -1,8 +1,9 @@
 import styles from "../../Movies.module.scss";
+import { ButtonProp } from "./Leftbutton";
 
-const Rightbutton = () => {
+const Rightbutton = ({onClick}: ButtonProp) => {
   return (
-    <button className={`${styles.buttons} ${styles.right}`}>
+    <button className={`${styles.buttons} ${styles.right}`} onClick={onClick}>
       ㅤ
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="50">
         <path
