@@ -4,9 +4,9 @@ export interface ButtonProp {
   onClick: () => void;
 }
 
-const Leftbutton = ({onClick}: ButtonProp) => {
+const Leftbutton = ({ onClick }: ButtonProp) => {
   return (
-    <button className={`${styles.buttons} ${styles.left}`} onClick={onClick}> 
+    <button className={`${styles.buttons} ${styles.left}`} onClick={onClick}>
       ㅤ
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="50">
         <path

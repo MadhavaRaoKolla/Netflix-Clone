@@ -9,12 +9,12 @@ import MovieRow from "../Rows/MovieRow";
 import ShowRow from "../Rows/ShowRow";
 
 type Props = {
-  movieData: MovieObject[];
+  AllMovies: { genre: string; movies: MovieObject[] }[];
   showData: ShowObject[];
   peopleData: PersonObject[];
 };
 
-const MoviesClient = ({ movieData, showData, peopleData }: Props) => {
+const MoviesClient = ({ showData, peopleData, AllMovies }: Props) => {
   const peopleContainer = useRef<HTMLDivElement>(null);
   const ScrollDiv = (element: HTMLDivElement | null, direction: string) => {
     if (element) {
@@ -22,13 +22,14 @@ const MoviesClient = ({ movieData, showData, peopleData }: Props) => {
       else element.scrollLeft += 500;
     }
   };
-
   return (
     <div className={styles.content}>
-      <div className={styles.section}>
-        <h1>Movies</h1>
-        <MovieRow movieData={movieData} />
-      </div>
+      {AllMovies.map((eachMovie) => (
+        <div className={styles.section} key={eachMovie.genre}>
+          <h1>{eachMovie.genre}</h1>
+          <MovieRow movieData={eachMovie.movies} />
+        </div>
+      ))}
 
       <div className={styles.section}>
         <h1>TV SHOWS</h1>
