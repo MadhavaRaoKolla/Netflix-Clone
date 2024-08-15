@@ -1,7 +1,7 @@
 import styles from "../../Movies.module.scss";
 import { ButtonProp } from "./Leftbutton";
 
-const Rightbutton = ({onClick}: ButtonProp) => {
+const Rightbutton = ({ onClick }: ButtonProp) => {
   return (
     <button className={`${styles.buttons} ${styles.right}`} onClick={onClick}>
       ㅤ

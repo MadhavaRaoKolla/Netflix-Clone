@@ -1,4 +1,4 @@
-import Data from "../../Data";
+// import Data from "../../Data";
 import Faq from "./components/Faq/Faq";
 import First from "./components/First/First";
 import Footer from "./components/Footer/Footer";

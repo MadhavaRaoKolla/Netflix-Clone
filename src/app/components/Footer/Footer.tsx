@@ -28,7 +28,7 @@ const Footer = () => {
               <li>Only on Netflix</li>
             </ul>
           </span>
-          <span >
+          <span>
             <Dropdown />
           </span>
           <span>Netflix india</span>
