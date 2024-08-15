@@ -21,4 +21,20 @@ const Data = [
       },
 ];
 
+export const MoviesGenresID = {
+  Action: 28,
+  Adventure: 12,
+  Drama: 18,
+  Romance: 10749,
+  Horror: 27,
+  SiFi:878
+}
+
+export const ShowsGenresID ={
+  Action: 10759,
+  Drama:18,
+  Romance:9648,
+  SiFi: 10765
+}
+
 export default Data;

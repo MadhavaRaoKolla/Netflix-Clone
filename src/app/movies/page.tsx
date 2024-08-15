@@ -8,7 +8,7 @@ export type MovieObject = {
   poster_path: string;
 };
 
-export type ShowObject = {  
+export type ShowObject = {
   id: number;
   name: string;
   poster_path: string;
@@ -19,6 +19,10 @@ export type PersonObject = {
   title: string;
   profile_path: string;
 };
+
+//action-28 adv-12 drama-18 romance-10749 horror-27 sifi-878
+//act and adv-10759 drama-18 romance-10749 horror-9648 sifi-10765
+//https://api.themoviedb.org/3/discover/movie?with_genres=28&api_key=YOUR_API_KEY
 
 const Movies = async () => {
   const MovieData = await fetch(
@@ -36,6 +40,11 @@ const Movies = async () => {
       `https://api.themoviedb.org/3/person/popular?api_key=${process.env.VITE_TMDB_API_KEY}`
     )
   ).json();
+
+  //  const action = await (
+  //   await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.VITE_TMDB_API_KEY}&with_genres=${10749}`)
+  //  ).json();
+  //  console.log(action);
 
   return (
     <div className={styles.layout}>
