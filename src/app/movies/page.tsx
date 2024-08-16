@@ -1,12 +1,14 @@
 import styles from "../Movies.module.scss";
 import Navbar from "../components/Navbar/Navbar";
 import MoviesClient from "../components/MoviesClient/MoviesClient";
-import { MoviesGenresID } from "../../../Data";
+import { MoviesGenresID, ShowsGenresID } from "../../../Data";
+import Banner from "../components/Banner/Banner";
 
 export type MovieObject = {
   id: number;
   title: string;
   poster_path: string;
+  overview: string;
 };
 
 export type ShowObject = {
@@ -23,6 +25,8 @@ export type PersonObject = {
 
 const Movies = async () => {
   const AllMovies: { genre: string; movies: MovieObject[] }[] = [];
+  const AllShows: { genre: string; movies: ShowObject[] }[] = [];
+
   Object.keys(MoviesGenresID).forEach(async (genre) => {
     const response = await (
       await fetch(
@@ -32,26 +36,36 @@ const Movies = async () => {
     AllMovies.push({ genre, movies: response.results });
   });
 
-  const ShowsData = await (
+  Object.keys(ShowsGenresID).forEach(async (genre) => {
+    const response = await (
+      await fetch(
+        `https://api.themoviedb.org/3/discover/tv?with_genres=${ShowsGenresID[genre]}&api_key=${process.env.VITE_TMDB_API_KEY}`
+      )
+    ).json();
+    AllShows.push({ genre, movies: response.results });
+  });
+
+  const Trending = await (
     await fetch(
-      `https://api.themoviedb.org/3/discover/tv?api_key=${process.env.VITE_TMDB_API_KEY}`
+      `https://api.themoviedb.org/3/trending/movie/day?language=en-US&api_key=${process.env.VITE_TMDB_API_KEY}`
     )
   ).json();
 
-  const PeopleData = await (
-    await fetch(
-      `https://api.themoviedb.org/3/person/popular?api_key=${process.env.VITE_TMDB_API_KEY}`
-    )
-  ).json();
+  // const PeopleData = await (
+  //   await fetch(
+  //     `https://api.themoviedb.org/3/person/popular?api_key=${process.env.VITE_TMDB_API_KEY}`
+  //   )
+  // ).json();
 
   return (
     <div className={styles.layout}>
       <Navbar />
+      <Banner trending={Trending.results} />
       <div className={styles.content}>
         <MoviesClient
           AllMovies={AllMovies}
-          showData={ShowsData.results}
-          peopleData={PeopleData.results}
+          AllShows={AllShows}
+          // trending={Trending.results}
         />
       </div>
     </div>
