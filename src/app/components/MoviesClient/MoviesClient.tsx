@@ -1,8 +1,8 @@
 "use client";
-import { useRef } from "react";
-import Link from "next/link";
-import Leftbutton from "../ArrowButtons/Leftbutton";
-import Rightbutton from "../ArrowButtons/Rightbutton";
+// import { useRef } from "react";
+// import Link from "next/link";
+// import Leftbutton from "../ArrowButtons/Leftbutton";
+// import Rightbutton from "../ArrowButtons/Rightbutton";
 import styles from "../../Movies.module.scss";
 import { MovieObject, ShowObject, PersonObject } from "@/app/movies/page";
 import MovieRow from "../Rows/MovieRow";
@@ -10,34 +10,36 @@ import ShowRow from "../Rows/ShowRow";
 
 type Props = {
   AllMovies: { genre: string; movies: MovieObject[] }[];
-  showData: ShowObject[];
-  peopleData: PersonObject[];
+  AllShows: { genre: string; movies: ShowObject[] }[];
+  // trending: MovieObject[];
 };
 
-const MoviesClient = ({ showData, peopleData, AllMovies }: Props) => {
-  const peopleContainer = useRef<HTMLDivElement>(null);
-  const ScrollDiv = (element: HTMLDivElement | null, direction: string) => {
-    if (element) {
-      if (direction === "left") element.scrollLeft -= 500;
-      else element.scrollLeft += 500;
-    }
-  };
+const MoviesClient = ({ AllMovies, AllShows }: Props) => {
+  // const peopleContainer = useRef<HTMLDivElement>(null);
+  // const ScrollDiv = (element: HTMLDivElement | null, direction: string) => {
+  //   if (element) {
+  //     if (direction === "left") element.scrollLeft -= 500;
+  //     else element.scrollLeft += 500;
+  //   }
+  // };
   return (
     <div className={styles.content}>
       {AllMovies.map((eachMovie) => (
         <div className={styles.section} key={eachMovie.genre}>
-          <h1>{eachMovie.genre}</h1>
+          <h2>{eachMovie.genre}</h2>
           <MovieRow movieData={eachMovie.movies} />
         </div>
       ))}
 
-      <div className={styles.section}>
-        <h1>TV SHOWS</h1>
-        <ShowRow showData={showData} />
-      </div>
+      {AllShows.map((eachShow) => (
+        <div className={styles.section} key={eachShow.genre}>
+          <h2>{eachShow.genre}</h2>
+          <ShowRow showData={eachShow.movies} />
+        </div>
+      ))}
 
-      <div className={styles.section}>
-        <h1>PEOPLE</h1>
+      {/* <div className={styles.section}>
+        <h2>PEOPLE</h2>
         <div className={styles.cardsContainer}>
           <Leftbutton
             onClick={() => ScrollDiv(peopleContainer.current, "left")}
@@ -47,7 +49,7 @@ const MoviesClient = ({ showData, peopleData, AllMovies }: Props) => {
               <Link key={item.id} href={`/movies/person/${item.id}`}>
                 <div className={styles.card}>
                   <img
-                    src={`https://image.tmdb.org/t/p/w500${item.profile_path}`}
+                    src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
                     alt={item.title}
                   />
                 </div>
@@ -58,7 +60,7 @@ const MoviesClient = ({ showData, peopleData, AllMovies }: Props) => {
             onClick={() => ScrollDiv(peopleContainer.current, "right")}
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
