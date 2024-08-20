@@ -17,12 +17,6 @@ export type ShowObject = {
   poster_path: string;
 };
 
-export type PersonObject = {
-  id: number;
-  title: string;
-  profile_path: string;
-};
-
 const Movies = async () => {
   const AllMovies: { genre: string; movies: MovieObject[] }[] = [];
   const AllShows: { genre: string; movies: ShowObject[] }[] = [];
@@ -51,21 +45,14 @@ const Movies = async () => {
     )
   ).json();
 
-  // const PeopleData = await (
-  //   await fetch(
-  //     `https://api.themoviedb.org/3/person/popular?api_key=${process.env.VITE_TMDB_API_KEY}`
-  //   )
-  // ).json();
-
   return (
     <div className={styles.layout}>
-      <Navbar />
+      <Navbar/>
       <Banner trending={Trending.results} />
       <div className={styles.content}>
         <MoviesClient
           AllMovies={AllMovies}
           AllShows={AllShows}
-          // trending={Trending.results}
         />
       </div>
     </div>

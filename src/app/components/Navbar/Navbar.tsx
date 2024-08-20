@@ -1,9 +1,24 @@
+"use client";
 import Link from "next/link";
 import "./Navbar.scss";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [show, setShow] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      window.scrollY > 250 ? setShow(true) : setShow(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="nav">
+    <div className={`nav ${show && "black"}`}>
       <Link href="/">
         <svg
           viewBox="0 0 111 30"
@@ -11,7 +26,7 @@ const Navbar = () => {
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
           role="img"
-          height="40"
+          height="28"
         >
           <g>
             <path
@@ -21,7 +36,15 @@ const Navbar = () => {
           </g>
         </svg>
       </Link>
-      <p>Welcome to Netflix Shows and Movies</p>
+      <div className="info">
+        <Link href={"#"}>Home</Link>
+        <Link href="#movies-section">Movies</Link>
+        <Link href="#tvshows-section">TV Shows</Link>
+        <Link href={"#"}>New and Popular</Link>
+        <Link href={"#"}>My List</Link>
+        <Link href={"#"}>Browse by Language</Link>
+      </div>
+      <div className="icons"></div>
     </div>
   );
 };
