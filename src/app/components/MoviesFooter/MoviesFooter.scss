@@ -1,0 +1,41 @@
+.moviesFooter {
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: center;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .links {
+      color: grey;
+
+      ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        li {
+          padding: 0 4.5rem 1rem 0;
+        }
+      }
+    }
+
+    div {
+      button {
+        color: grey;
+        border: 1px solid grey;
+        background: transparent;
+        padding: 5px;
+      }
+    }
+  }
+}

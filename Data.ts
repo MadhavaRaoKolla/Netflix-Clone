@@ -35,10 +35,10 @@ export const MoviesGenresID : AllTypes = {
 }
 
 export const ShowsGenresID: AllTypes = {
-  "Comedy": 10759,
-  "Drama": 18,
-  "Romance": 10749,
-  "Adventure": 9648,
-  "Documentaries": 10765
+  "Critically Aclaimed TV Shows": 10759,
+  "TV Action & Adventure": 18,
+  "Familiar TV Favourites": 10749,
+  "TV Comedies": 9648,
+  "TV Sci-Fi & Horror": 10765
 }
 export default Data;
