@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 import MoviesClient from "../components/MoviesClient/MoviesClient";
 import { MoviesGenresID, ShowsGenresID } from "../../../Data";
 import Banner from "../components/Banner/Banner";
+import MoviesFooter from "../components/MoviesFooter/MoviesFooter";
 
 export type MovieObject = {
   id: number;
@@ -47,14 +48,12 @@ const Movies = async () => {
 
   return (
     <div className={styles.layout}>
-      <Navbar/>
+      <Navbar />
       <Banner trending={Trending.results} />
       <div className={styles.content}>
-        <MoviesClient
-          AllMovies={AllMovies}
-          AllShows={AllShows}
-        />
+        <MoviesClient AllMovies={AllMovies} AllShows={AllShows} />
       </div>
+      <MoviesFooter />
     </div>
   );
 };

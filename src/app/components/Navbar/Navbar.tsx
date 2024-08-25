@@ -88,6 +88,18 @@ const Navbar = () => {
             fill="transparent"
           />
         </svg>
+        {/* dropdown */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28px"
+          height="40px"
+          viewBox="0 0 24 24"
+        >
+          <rect x="0" fill="none" width="28" height="24" />
+          <g>
+            <path d="M7 10l5 5 5-5" fill="white" />
+          </g>
+        </svg>
       </div>
     </div>
   );

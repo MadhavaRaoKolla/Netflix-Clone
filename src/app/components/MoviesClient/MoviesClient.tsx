@@ -1,4 +1,4 @@
-"use client";
+"use client"; //using ref in Movie and show rows, declare there or declare here
 import styles from "../../Movies.module.scss";
 import { MovieObject, ShowObject } from "@/app/movies/page";
 import MovieRow from "../Rows/MovieRow";
