@@ -127,7 +127,7 @@ const Movie = async ({
             <div>
               <p>
                 <span className="title">Genres:</span> Family Time TV, Sitcoms,
-                TV Comedies
+                TV Comedies.
               </p>
             </div>
           </div>

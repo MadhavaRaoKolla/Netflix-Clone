@@ -22,7 +22,7 @@ const Banner = ({ trending }: Props) => {
       const banner = document.querySelector(".banner") as HTMLElement;
       const scrollY = window.scrollY;
       const maxScroll = 480;
-      const opacity = Math.max(0, 1 - scrollY / maxScroll);
+      const opacity = 1 - scrollY / maxScroll;
 
       if (banner) {
         banner.style.backgroundSize = "cover";
@@ -42,6 +42,7 @@ const Banner = ({ trending }: Props) => {
       style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/original${movie?.poster_path})`,
       }}
+      id="home"
     >
       <div className="content">
         <h1>{movie?.title.toUpperCase()}</h1>

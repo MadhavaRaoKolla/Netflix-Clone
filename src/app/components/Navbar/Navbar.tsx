@@ -11,7 +11,7 @@ const Navbar = () => {
       window.scrollY > 250 ? setShow(true) : setShow(false);
     };
     window.addEventListener("scroll", handleScroll);
-
+    //better to remove eventlistners after unmounting
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -37,7 +37,7 @@ const Navbar = () => {
         </svg>
       </Link>
       <div className="info">
-        <Link href={"#"}>Home</Link>
+        <Link href="#home">Home</Link>
         <Link href="#movies-section">Movies</Link>
         <Link href="#tvshows-section">TV Shows</Link>
         <Link href={"#"}>New and Popular</Link>
