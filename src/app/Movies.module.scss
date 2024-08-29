@@ -51,7 +51,7 @@
               transform-origin: center center;
               border-radius: 5px;
               background-color: rgb(19, 19, 19);
-              transition: 0.2s ease-in-out;
+              transition: 0.3s ease-in-out;
               &:first-child {
                 transform-origin: left center;
               }
@@ -70,6 +70,8 @@
                 img {
                   width: 185px;
                   height: 150px;
+                  object-fit: cover;
+                  // object-fit: contain;
                 }
                 .hidden {
                   display: block;
