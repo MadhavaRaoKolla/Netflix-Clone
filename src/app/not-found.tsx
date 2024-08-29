@@ -6,7 +6,7 @@ const NotFound = () => {
     <div className={styles.error}>
       <div className={styles.box}>
         <h1>404 ERROR</h1>
-        <p>You should'nt be here!</p>
+        <p>You should not be here!</p>
         <h3>Lets go Home!</h3>
         <Link href="/">
           <svg
