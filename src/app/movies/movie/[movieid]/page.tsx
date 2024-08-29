@@ -152,7 +152,7 @@ const Movie = async ({
               <p>Season 1: </p>
               <p className="box">{data.adult ? "A 18" : "U/A 13"}+</p>
               <p>
-                {data.genres[0].name}, {data.genres[1].name}, Thriller
+                Adventure, Sci-Fi & Thriller
               </p>
             </div>
           </div>
