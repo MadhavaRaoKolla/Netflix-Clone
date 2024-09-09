@@ -7,6 +7,7 @@ export type Props = {
   image: string;
 };
 
+// const First: React.FC<Props> = (props) => {
 const First = (props: Props) => {
   return (
     <>

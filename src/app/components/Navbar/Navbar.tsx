@@ -11,7 +11,7 @@ const Navbar = () => {
       window.scrollY > 250 ? setShow(true) : setShow(false);
     };
     window.addEventListener("scroll", handleScroll);
-    //better to remove eventlistners after unmounting
+    //removing eventlistners after unmounting, this takes more memory, cleaning up
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
