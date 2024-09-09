@@ -12,7 +12,10 @@ type showRowProps = {
 const ShowRow = ({ showData }: showRowProps) => {
   const showContainer = useRef<HTMLDivElement>(null);
 
-  const ScrollDiv = (element: HTMLDivElement | null, direction: string) => {
+  const ScrollDiv = (
+    element: HTMLDivElement | null,
+    direction: string
+  ): void => {
     if (element) {
       if (direction === "left") element.scrollLeft -= 500;
       else element.scrollLeft += 500;
